@@ -3,7 +3,27 @@ import {FaSearch} from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { useGlobalContext } from '../../context.';
 import "./SearchForm.css";
+import styled from 'styled-components';
 
+
+const SearchFormWrapper = styled.div`
+
+.search-form{
+    width: 100%;
+    max-width: 680px;
+}
+.search-form-elem{
+    padding: 1.4rem 2.8rem;
+    border-radius: 3.8rem;
+}
+.search-form-elem .form-control{
+    font-size: 2rem;
+    padding: 0.6rem;
+}
+.search-form-elem .form-control::placeholder{
+    opacity: 0.9;
+}
+`;
 const SearchForm = () => {
   const {setSearchTerm, setResultTitle} = useGlobalContext();
   const searchText = useRef('');
